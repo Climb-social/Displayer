@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "0.18.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "climb-displayer",
+  "version": "0.0.1",
+  "description": "Displayer app for Climb.social",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Michele memoli <michele@climb.social> (http://climb.social)",
   "license": "MIT",
   "dependencies": {
     "cssnano": "^3.3.2",
