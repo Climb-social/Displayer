@@ -23,11 +23,13 @@
   "author": "Michele memoli <michele@climb.social> (http://climb.social)",
   "license": "MIT",
   "dependencies": {
+    "bricks.js": "^1.1.1",
     "cssnano": "^3.3.2",
     "debug": "^2.2.0",
     "dotenv": "^1.2.0",
     "history": "1.13.1",
     "react": "^0.14.0",
+    "react-climb-social": "^2.0.0-alpha.1",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
     "react-router": "1.0.1",

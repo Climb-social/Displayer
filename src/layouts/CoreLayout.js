@@ -12,10 +12,20 @@ import 'styles/core.scss'
 // define it with a plain javascript function...
 function CoreLayout ({ children }) {
   return (
-    <div className='page-container'>
-      <div className='view-container'>
-        {children}
+    <div>
+      <header>
+        Climb.Social
+      </header>
+
+      <div className='max-width-4 mx-auto'>
+        <div className='clearfix'>
+          {children}
+        </div>
       </div>
+
+      <footer>
+        Footer
+      </footer>
     </div>
   )
 }
