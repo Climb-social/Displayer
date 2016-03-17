@@ -22,28 +22,29 @@ export const actions = {
 const initialState = {
   options: [
     {
+      id: 0,
       name: 'List View',
       key: 'LIST_VIEW',
-      component: ListView
+      component: ListView,
+      props: {}
     },
     {
+      id: 1,
       name: 'Column View',
       key: 'COLUMN_VIEW',
-      component: ColumnView
+      component: ColumnView,
+      props: {
+        sizes: [
+          { columns: 1, gutter: 15 },
+          { mq: '640px', columns: 2, gutter: 15 },
+          { mq: '958px', columns: 3, gutter: 15 }
+        ]
+      }
     }
   ],
-  selected: ListView
+  selected: 0
 }
 
 export default handleActions({
-  [SELECT_VIEW]: (state, { payload }) => {
-    const newOption = state.options.find(option => {
-      return option.key === payload
-    })
-
-    return {
-      ...state,
-      selected: newOption.component
-    }
-  }
+  [SELECT_VIEW]: (state, { payload }) => ({ ...state, selected: payload })
 }, initialState)

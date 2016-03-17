@@ -58,6 +58,7 @@ const webpackConfig = {
         exclude: /node_modules/
       }
     ],
+    noParse: [/bricks.js/],
     loaders: [
       {
         test: /\.(js|jsx)$/,
