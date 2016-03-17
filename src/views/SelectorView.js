@@ -37,7 +37,16 @@ export class SelectorView extends React.Component {
           <h1>Climb.Social</h1>
           <p>Something here</p>
 
-          <input type='text' value={ collectionId }/>
+          <form className='mb3'>
+            <label htmlFor='collection_id'
+                   className='block'>
+              Collection
+            </label>
+            <input type='text'
+                   id='collection_id'
+                   value={ collectionId }/>
+          </form>
+
 
           {options.map(option => {
             return (
