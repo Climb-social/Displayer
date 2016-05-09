@@ -19,9 +19,15 @@ const mapStateToProps = (state) => ({
 export class SelectorView extends React.Component {
   static propTypes = {
     collectionId: React.PropTypes.string.isRequired,
+    setCollection: React.PropTypes.func.isRequired,
     options: React.PropTypes.array.isRequired,
     selectedView: React.PropTypes.node.isRequired,
     selectView: React.PropTypes.func.isRequired
+  }
+
+  handleCollectionInputChange (event) {
+    const newValue = event.target.value.trim()
+    this.props.setCollection(newValue)
   }
 
   render () {
@@ -44,6 +50,7 @@ export class SelectorView extends React.Component {
             </label>
             <input type='text'
                    id='collection_id'
+                   onChange={ this.handleCollectionInputChange.bind(this) }
                    value={ collectionId }/>
           </form>
 
